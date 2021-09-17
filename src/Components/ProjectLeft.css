@@ -1,0 +1,69 @@
+.CardLeft {
+  width: 80%;
+  margin: 20% auto;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  transform: skewY(-2deg);
+}
+
+.SkewLeft {
+  width: 100%;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  transform: skewY(2deg);
+}
+.SkewLeft:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: -39px;
+  left: 0;
+  z-index: -2;
+}
+.SkewLeft:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: #1f1d1d;
+  top: -80px;
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+}
+.project-info {
+  width: 100%;
+  margin: auto;
+}
+
+.project-image {
+  width: 50%;
+  margin: auto;
+  display: block;
+}
+
+.tags-left {
+  width: 50%;
+  list-style: none;
+  display: flex;
+  margin: 0 auto;
+}
+
+.tag-left {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+
+.tag-left + .tag-left {
+  margin-left: 10px;
+}
+
+.info-list {
+  list-style: none;
+}

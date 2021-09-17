@@ -5,9 +5,6 @@ function AboutMe() {
       <div className="logo-container">
         <img className="main-logo" src="images/MEnoBG.png" alt="ME" />
       </div>
-      <div className="logo-container">
-        <img className="main-logo" src="images/MEnoBG.png" alt="ME" />
-      </div>
     </div>
   );
 }

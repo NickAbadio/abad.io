@@ -1,6 +1,6 @@
-.Portfolio-cotainer {
+.Portfolio-container {
   width: 100%;
-  background-color: wheat;
-  margin: 0 auto;
+  margin: 10% auto;
   text-align: center;
+  border-radius: 100px;
 }
