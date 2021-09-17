@@ -1,16 +1,37 @@
 import "./Portfolio.css";
+import { useState } from "react";
 import ProjectLeft from "./ProjectLeft";
 import ProjectRight from "./ProjectRight";
 
 function Portfolio(props) {
   let itemList = [];
+  const [toggles, newToggles] = useState({
+    REACT: true,
+    HTML: true,
+    PYTHON: true,
+  });
+
   function onClickButton(test) {
-    console.log(test);
+    const newList = { ...toggles };
+    newList[test] = !newList[test];
+    newToggles(newList);
+    itemList = [];
+    console.log(toggles);
   }
 
+  let count = 0;
   for (let i = 0; i < props.projects.length; i++) {
-    console.log(props.projects[i].title);
-    if (i % 2 === 0) {
+    let cont = true;
+    for (let j = 0; j < props.projects[i].tags.length; j++) {
+      if (!toggles[props.projects[i].tags[j]["title"]]) {
+        cont = false;
+      }
+    }
+
+    if (!cont) {
+      continue;
+    }
+    if (count % 2 === 0) {
       itemList.push(
         <ProjectRight
           title={props.projects[i].title}
@@ -29,12 +50,15 @@ function Portfolio(props) {
         />
       );
     }
+    count++;
   }
 
   return (
     <div className="Portfolio-container" id="portfolio">
       <div className="filter-container">
-        <button onClick={() => onClickButton(4)}> REACT</button>
+        <button onClick={() => onClickButton("REACT")}> REACT</button>
+        <button onClick={() => onClickButton("HTML")}> HTML</button>
+        <button onClick={() => onClickButton("PYTHON")}> PYTHON</button>
       </div>
       <div>{itemList}</div>
     </div>

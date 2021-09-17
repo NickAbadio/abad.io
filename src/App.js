@@ -29,6 +29,18 @@ function App() {
       p1: "test3 yolo swag money",
       tags: [{ title: "HTML" }, { title: "PYTHON" }],
     },
+    {
+      title: "title5",
+      image: "images/MEnoBG.png",
+      p1: "test3 yolo swag money",
+      tags: [{ title: "HTML" }, { title: "PYTHON" }],
+    },
+    {
+      title: "title6",
+      image: "images/MEnoBG.png",
+      p1: "test3 yolo swag money",
+      tags: [{ title: "HTML" }],
+    },
   ];
   return (
     <div className="App">
