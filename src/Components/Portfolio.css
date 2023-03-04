@@ -1,6 +1,8 @@
-.Portfolio-container {
-  width: 100%;
-  margin: 10% auto;
-  text-align: center;
-  border-radius: 100px;
+.portfolio-container {
+    width: 100%;
+    align-content: center;
+}
+
+.Destruction-container {
+    width: 100%;
 }

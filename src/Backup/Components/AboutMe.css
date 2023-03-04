@@ -1,0 +1,56 @@
+.aboutme-container {
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 100%;
+  align-content: center;
+}
+
+.container {
+  margin: 0 auto;
+  width: 40%;
+  color: rgb(222, 104, 238);
+  border: currentColor 0.125em solid;
+  border-radius: 0.25em;
+  padding: 0.25em 1em;
+  text-shadow: 0 0 1em currentColor;
+  box-shadow: 0 0 1em 0 currentColor;
+  position: relative;
+}
+
+.box {
+  position: relative;
+  margin: 0 auto;
+  width: 60%;
+  background: rgb(12, 12, 12);
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -2;
+  filter: blur(40px);
+}
+
+.box::before,
+.box::after {
+  background: linear-gradient(235deg, #89ff00, #060c21, #00bcd2);
+}
